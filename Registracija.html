@@ -1,0 +1,56 @@
+<!doctype html>
+<head>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico"> 
+<link rel="stylesheet" href="Navbar_reg.css">
+<link rel="stylesheet" href="registracija.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="validacija1.js"></script>
+<script src="kolacic.js"></script>
+<script src="kolacic_sifra.js"></script>
+<script src="dugme.js"></script>
+</head>
+<body>
+<title> Android blog </title>
+<div>
+   <button class="btn" onclick="otvori()"><i class="fa fa-bars"></i> </button>
+        <ul id="meni">
+        <li><a href="Naslovna.html">Naslovna</a></li>
+        <li>
+            <a href="Uređaji.html">Uređaji ￬</a>
+            <ul class="drop">
+                <li><a href="Pixel.html">Google Pixel 2</a></li>
+                <li><a href="V30.html">LG V30</a></li>
+            </ul>
+        </li>
+        <li><a href="Softver.html">Softver</a></li>
+        <li><a href="Registracija.html">Registracija</a></li>
+		<li><a href="preporuka.html"> Preporuka telefona </a> </li>
+    </ul>
+	</div>
+<div class="bg">
+</div>
+<center>
+<div class="reg">
+<h1> Napravite svoj nalog </h1>
+<form name="registracija" class="regi" method="post" action="Registracija.html">
+<p> Korisničko ime: <br><input type="text" size="14" name="ime" id="ime"> </p>
+<span id="error0"></span>
+<p> Lozinka: <br><input type="password" size="15" name="lozinka0" id="lozinka0"> </p>
+<span id="error1"></span>
+<p> Potvrdite lozinku: <br><input type="password" size="15" name="lozinka1" id="lozinka1"> </p>
+<span id="error2"></span>
+<p> Vaša e-mail adresa: <br><input type="text" size="15" name="email" id="email"> </p>
+<span id="error3"></span>
+<p> Da li želite da dobijate obaveštenja na e-mail ? </p> <br>
+<p> <input type="radio" name="obav" checked> Da <input type="radio" name="obav" > Ne </p> 
+<button type="button" onclick="validacija()">Prosledite</button>
+<button type="button" onclick="kolacic();kolacic1()">Sačuvajte ime za dalji unos </button>
+<button type="button" onClick="izbrisiCookie('ime1')">Poništi sačuvano ime </button>
+<p id="greska"> </p>
+</form>
+</div>
+</center>
+</body>
+</html>

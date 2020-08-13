@@ -1,0 +1,81 @@
+<!doctype html>
+<head>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico"> 
+<link rel="stylesheet" href="Navbar_reg.css">
+<link rel="stylesheet" href="registracija.css">
+<script src="kolacic.js">
+function validacija() {
+    var greska, ime, lozinka1, lozinka1_1, lozinka2, lozinka2_2, email;
+    greska=document.getElementById("greska");
+    greska.innerHTML="";
+    ime=document.getElementById("ime").value;
+    lozinka1=document.getElementById("lozinka0").value;
+    lozinka1_1=document.getElementById("lozinka0").value.length;
+    lozinka2=document.getElementById("lozinka1").value;
+    lozinka2_2=document.getElementById("lozinka1").value.length;
+    email=document.getElementById("email").value;
+    
+try{
+if(ime=="") throw "Morate uneti ime";
+if(lozinka1=="") throw "Morate uneti lozinku";
+if(lozinka1_1 < 8) throw "Lozinka ne sme biti kraća od 8 karaktera";
+if(lozinka2=="") throw "Morate uneti lozinku za potvrdu";
+if(lozinka2 != lozinka1) throw "Lozinke se ne podudaraju";
+if(lozinka2_2 < 8) throw "Lozinka ne sme biti kraća od 8 karaktera";
+if(email=="") throw "Morate uneti email";
+}
+catch(error){
+	greska.innerHTML=error;
+}
+}
+
+
+
+</script>
+</head>
+<body onload="popuni()">
+<title> Android blog </title>
+
+<div class="navbar">
+   <label for="meni" class="meni">Otvori meni</label>
+    <input type="checkbox" id="meni" role="button">
+        <ul id="meni">
+        <li><a href="Naslovna.html">Naslovna</a></li>
+        <li>
+            <a href="Uređaji.html">Uređaji ￬</a>
+            <ul class="drop">
+                <li><a href="Pixel.html">Google Pixel 2</a></li>
+                <li><a href="V30.html">LG V30</a></li>
+            </ul>
+        </li>
+        <li><a href="Softver.html">Softver</a></li>
+        <li><a href="Registracija.html">Registracija</a></li>
+		<li><a href="preporuka.html"> Preporuka telefona </a> </li>
+    </ul>
+	</div>
+
+<div class="bg">
+</div> 
+<center>
+<div class="reg">
+<h1> Napravite svoj nalog </h1>
+<form name="registracija" class="regi" method="post" action="Registracija.html">
+<p> Korisničko ime: <br><input type="text" size="14" name="ime" id="ime"> </p>
+
+<p> Lozinka: <br><input type="password" size="15" name="lozinka0" id="lozinka0"> </p>
+
+<p> Potvrdite lozinku: <br><input type="password" size="15" name="lozinka1" id="lozinka1"> </p>
+
+<p> Vaša e-mail adresa: <br><input type="text" size="15" name="email" id="email"> </p>
+
+<p> Da li želite da dobijate obaveštenja na e-mail ? </p> <br>
+<p> <input type="radio" name="obav" checked> Da <input type="radio" name="obav" > Ne </p> 
+<button type="button" onclick="validacija()">Prosledite</button>
+<button type="button" onclick="kolacic()">Sačuvajte ime za login formu</button>
+<a href="#" onClick="eraseCookie('ime1')">Ponisti</a>
+<p id="greska"> </p>
+</div>
+</body>
+</html>

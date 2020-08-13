@@ -1,0 +1,78 @@
+<!doctype html>
+<head>
+<meta charset="UTF-8"> 
+<link rel="icon" href="favicon.ico"> 
+<link rel="stylesheet" href="Navbar.css">
+<link rel="stylesheet" href="parallax_uređaji.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="kolacic.js"></script>
+<script src="kolacic_sifra.js"></script>
+<script src="dugme.js"></script>
+<script src="promena.js"></script>
+</head>
+<body onload="popuni();popuni2()">
+<title> Android blog </title>
+<div>
+    <button class="btn" id="ikonica" onclick="otvori()"><i class="fa fa-bars"></i> </button>
+  <ul id="meni">
+        <li ><a href="Naslovna.html" id="li">Naslovna</a></li>
+        <li>
+            <a href="Uređaji.html" id="li1">Uređaji ￬</a>
+            <ul class="drop">
+                <li><a href="Pixel.html">Google Pixel 2</a></li>
+                <li><a href="V30.html">LG V30</a></li>
+            </ul>
+        </li>
+        <li><a href="Softver.html" id="li2">Softver</a></li>
+        <li><a href="Registracija.html" id="li3">Registracija</a></li>
+        <li><a href="preporuka.html" id="li4"> Preporuka telefona </a> </li>
+        <li>
+    </ul>
+    </div>              
+	<div>
+	<form  class="login" id="polja">     
+    <input type="button" id="dugme_promena" class="promena" onclick="promena()" value="Tema" >          	
+<input type="text" placeholder="Pretraga..">	
+                        <input type="text"  name="korisničko" placeholder="Korisničko ime" id="ime">      
+                        <input type="password"  name="lozinka" placeholder="Lozinka" id="lozinka">                     
+                    <input type="submit" value="Uloguj se" >
+					</div>
+                </form>
+</div>
+<div class="parallax0">
+<div class="baner">
+<center>
+<h1>Android blog Uređaji </h1>
+<h3>U ovoj sekciji se nalaze uređaji i njihove karakteristike </h3>
+</center>
+</div>
+</div>
+<div class="parallax1">
+<div class="sadrzaj">
+<center>
+<h1> <a href="Pixel.html"> Google Pixel 2 </a></h1>
+<p>Prošle godine Google je predstavio novu Pixel liniju koja je uključivala dva modela, Pixel i 
+Pixel XL. Pixel modeli su bili namenjeni poznavaocima uređaja ili entuzijastima. Pored najnovijeg operativnog sistema, 
+imali su odlične kamere. Ove godine, Google je takođe predstavio dva nova modela, Pixel 2 i Pixel 2 XL. Najveća odlika i 
+ovih modela je čist Android uz obećanje duge podrške, kao i veoma dobra kamera. Kao što i ime sugeriše, 
+Pixel 2 sa 5 inčnim ekranom je kompaktni uređaj u odnosu na XL verziju.
+</p>
+</center>
+ </div>
+ </div> 
+ <div class="parallax2">
+ <div class="sadrzaj">
+<center>
+<h1> <a href="V30.html">LG V30 </a></h1>
+<p>V30 je novi vodeći LG model i naslednik V20 modela. Uređaj odlikuje prilično velik Oled ekran od 6 inča, 
+1440x2880 rezolucije i LG FullVision 18:9 odnos stranica, koji zauzima skoro celu prednju stranu uređaja. Uređaj ima jedan od najboljih dizajna na tržištu uz odličnu izradu. 
+Takođe poseduje Snapdragon 835 čipset sa osmojezgarnim procesorom koji daje odlične performanse, dobru dual kameru, jaku bateriju, impresivan zvuk, podržava bežično punjenje i vodootporan je.
+</p>
+</center>
+</div>
+
+<div class="footer" id="footer">                
+                <p> &copy; Pavle Vukajlović 2018</p>
+</div>
+</body>
+</html>

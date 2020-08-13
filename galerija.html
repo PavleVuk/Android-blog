@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="galerija.css">
+<script src="galerija.js"></script>
+</head>
+<body>
+
+<h2 style="text-align:center">Galerija preporučenih mobilnih telefona</h2>
+
+<div class="red">
+  <div class="kolona">
+    <img src="Fotografije/Pixel.jpg" style="width:100%" onclick="otvoriModal();trenutniSlajd(1)" class="hover-senka cursor">
+  </div>
+  <div class="kolona">
+    <img src="Fotografije/V30.jpg" style="width:100%" onclick="otvoriModal();trenutniSlajd(2)" class="hover-senka cursor">
+  </div>
+  <div class="kolona">
+    <img src="Fotografije/ip8.jpg" style="width:100%" onclick="otvoriModal();trenutniSlajd(3)" class="hover-senka cursor">
+  </div>
+</div>
+
+<div id="mojModal" class="modal">
+  <span class="dugme cursor" onclick="zatvoriModal()">&times;</span>
+  <div class="modal-sadrzaj">
+
+    <div class="slajd">
+      <div class="broj">1 / 3</div>
+      <img src="Fotografije/Pixel.jpg" style="width:100%">
+    </div>
+
+    <div class="slajd">
+      <div class="broj">2 / 3</div>
+      <img src="Fotografije/V30.jpg" style="width:100%">
+    </div>
+
+    <div class="slajd">
+      <div class="broj">3 / 3</div>
+      <img src="Fotografije/ip8.jpg" style="width:100%">
+    </div>
+    
+    <a class="prethodni" onclick="plusSlajd(-1)">&#10094;</a>
+    <a class="sledeci" onclick="plusSlajd(1)">&#10095;</a>
+
+    <div class="naslov-container">
+      <p id="naslov"></p>
+    </div>
+    <div class="kolona">
+      <img class="demo cursor" src="Fotografije/Pixel.jpg" style="width:100%" onclick="trenutniSlajd(1)" alt="Google Pixel 2">
+    </div>
+    <div class="kolona">
+      <img class="demo cursor" src="Fotografije/V30.jpg" style="width:100%" onclick="trenutniSlajd(2)" alt="LG V30">
+    </div>
+    <div class="kolona">
+      <img class="demo cursor" src="Fotografije/ip8.jpg" style="width:100%" onclick="trenutniSlajd(3)" alt="iPhone 8">
+    </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

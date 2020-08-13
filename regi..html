@@ -1,0 +1,148 @@
+<!doctype html>
+<head>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico"> 
+<link rel="stylesheet" href="Navbar_reg.css">
+<link rel="stylesheet" href="registracija.css">
+<script>
+function validacija() {
+    var greska, ime, lozinka1, lozinka1_1, lozinka2, lozinka2_2, email;
+    greska=document.getElementById("greska");
+    greska.innerHTML="";
+    ime=document.getElementById("ime").value;
+    lozinka1=document.getElementById("lozinka0").value;
+    lozinka1_1=document.getElementById("lozinka0").value.length;
+    lozinka2=document.getElementById("lozinka1").value;
+    lozinka2_2=document.getElementById("lozinka1").value.length;
+    email=document.getElementById("email").value;
+    
+try{
+if(ime=="") throw "Morate uneti ime";
+if(lozinka1=="") throw "Morate uneti lozinku";
+if(lozinka1_1 < 8) throw "Lozinka ne sme biti kraća od 8 karaktera";
+if(lozinka2=="") throw "Morate uneti lozinku za potvrdu";
+if(lozinka2 != lozinka1) throw "Lozinke se ne podudaraju";
+if(lozinka2_2 < 8) throw "Lozinka ne sme biti kraća od 8 karaktera";
+if(email=="") throw "Morate uneti email";
+}
+catch(error){
+	greska.innerHTML=error;
+}
+/*
+var today = new Date();
+  var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
+
+  function setCookie(name, value)
+  {
+    document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+  }
+
+function getCookie(name)
+  {
+    var re = new RegExp(name + "=([^;]+)");
+    var value = re.exec(document.cookie);
+    return (value != null) ? unescape(value[1]) : null;
+  }
+
+
+function storeValues(registracija)  
+  {
+    setCookie("ime", registracija.ime.value);
+    return true;
+}
+
+
+
+
+
+
+/*function getkolacic(cime){
+	var ime=cime+"=";
+	var decodedCookie=decodeURIComponent(document.cookie);
+	 var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(ime) == 0) {
+            return c.substring(ime.length, c.length);
+        }
+    }
+    return "";
+}
+}
+//document.getElementById("registracija").onsubmit = handleinput;
+
+/*if(document.registracija.ime.value == ""){
+	document.getElementById("error0").innerHTML = "Morate uneti ime";
+	return false; //vraća false da forma ne bi izvršila default akciju
+	}
+	else if ((document.registracija.lozinka0.value== "") && (document.registracija.lozinka1.value == "")){	
+	document.getElementById("error1").innerHTML = "Morate uneti lozinku";
+	return false;
+	}
+	else if ((document.registracija.lozinka0.value.length < 8) && (document.registracija.lozinka1.value.length < 8)){ 
+	document.getElementById("error2").innerHTML = "Lozinka mora biti duža od 8 karaktera";
+	return false;
+	}
+	else if(document.registracija.lozinka0.value != document.registracija.lozinka1.value){
+	document.getElementById("error2").innerHTML = "Lozinke se ne podudaraju";
+	return false;
+	}
+	
+	else if(document.registracija.email.value==""){
+	document.getElementById("error3").innerHTML = "Morate uneti email adresu";
+	return false;
+	}
+	
+	document.getElementById("registracija").onsubmit = handleinput;
+} */
+</script>
+</head>
+<body>
+<title> Android blog </title>
+
+<div class="navbar">
+   <label for="meni" class="meni">Otvori meni</label>
+    <input type="checkbox" id="meni" role="button">
+        <ul id="meni">
+        <li><a href="Naslovna.html">Naslovna</a></li>
+        <li>
+            <a href="Uređaji.html">Uređaji ￬</a>
+            <ul class="drop">
+                <li><a href="Pixel.html">Google Pixel 2</a></li>
+                <li><a href="V30.html">LG V30</a></li>
+            </ul>
+        </li>
+        <li><a href="Softver.html">Softver</a></li>
+        <li><a href="Registracija.html">Registracija</a></li>
+		<li><a href="preporuka.html"> Preporuka telefona </a> </li>
+    </ul>
+	</div>
+
+<div class="bg">
+</div> 
+<center>
+<div class="reg">
+<h1> Napravite svoj nalog </h1>
+<form name="registracija" class="regi" method="post" action="Registracija.html">
+<p> Korisničko ime: <br><input type="text" size="14" name="ime" id="ime"> </p>
+<span id="error0"></span>
+<p> Lozinka: <br><input type="password" size="15" name="lozinka0" id="lozinka0"> </p>
+<span id="error1"></span>
+<p> Potvrdite lozinku: <br><input type="password" size="15" name="lozinka1" id="lozinka1"> </p>
+<span id="error2"></span>
+<p> Vaša e-mail adresa: <br><input type="text" size="15" name="email" id="email"> </p>
+<span id="error3"></span>
+<p> Da li želite da dobijate obaveštenja na e-mail ? </p> <br>
+<p> <input type="radio" name="obav" checked> Da <input type="radio" name="obav" > Ne </p> 
+<button type="button" onclick="validacija()">Prosledite</button>
+<script type="text/javascript">
+	if(ime = getCookie("ime")) document.registracija.ime.value = ime;
+</script>
+<p id="greska"> </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+*{
+    margin:0;
+    padding:0;
+}
+#meni{
+    position: absolute;
+	width:100%;
+	background-color:#31577C;
+}
+
+.bg{
+    
+}
+ul {
+    list-style-type:none;
+    position: absolute;
+}
+li {
+    display:inline-block;
+    float: left;
+    position: :relative;
+}
+li a {
+    display:block;
+    min-width:140px;
+    text-align: center;
+    line-height: 47px;
+    font-family:Arial;
+    color: white;
+    background: #31577C;
+    text-decoration: none;
+	
+}
+li:hover a {
+    background: #97C026;
+	transition: background-color 0.5s ease;
+}
+li:hover ul a {
+    background: #f3f3f3;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+	transition: background-color 0.5s ease;
+}
+li:hover ul a:hover {
+    background: #97C026;
+    color: white;
+}
+li ul {
+    display: none;
+}
+li ul li {
+    display: block;
+    float: none;
+}
+ul li a:hover + .drop, .drop:hover {
+    display: block;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+input[type=checkbox]:checked ~ #meni{
+    display: block;
+}
+.btn {
+    background-color: #31577C;
+    border: none; 
+    color: white; 
+    margin:0;
+    padding: 12px 16px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    width:100%;
+    display:none;
+
+}
+@media screen and (max-width : 1080px){
+    ul {
+        position: static;
+        display: none;
+    }
+    ul li, li a {
+        width: 100%;
+    }
+    .meni {
+        display:block;
+    }
+    .login{
+      display:none;
+    }
+    .btn{
+        display:block;
+    }
+
+}

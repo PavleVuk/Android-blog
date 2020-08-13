@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    padding:0;
+}
+ul { /*skidanje oznaka liste*/
+    list-style-type:none;
+    position: absolute;
+}
+li { /*horizontalna lista*/
+    display:inline-block;
+    float: left;
+}
+li a { /*stil meni linkova*/
+    display:block;
+    min-width:140px;
+    text-align: center;
+    line-height: 47px;
+    font-family:Arial;
+    color: white;
+    background:black;
+    text-decoration: none;
+}
+li:hover a { /* hover za top linkove*/
+    background: #97C026;
+	transition: background-color 0.5s ease;
+}
+li:hover ul a { /*stil drop linkova*/
+    background: white;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+	transition: background-color 0.5s ease;
+}
+li:hover ul a:hover { /*hover za drop linkove*/
+    background: #97C026;
+    color: white;
+}
+li ul { /*sakrivanje drop linkova*/
+    display: none;
+}
+li ul li { /*stilizovanje vertikalnih drop linkova*/
+    display: block;
+    float: none;
+}
+ul li a:hover + .drop, .drop:hover { /*drop se pojavljuje na hover /
+ + selektuje sve elemente koji su postavljeni odmah posle ul li a:hover */
+    display: block;
+}
+
+.login {
+  width: 100%;
+  text-align: right;
+  float: right;
+  margin: 0 0 0 0;
+  background:#31577C;
+}
+button{
+  display:none;
+}
+input[type=checkbox]{
+    display: none;
+}
+input[type=checkbox]:checked ~ #meni{  /* ~selektuje sve elemente koji predhode checkbox elementu*/
+    display: block;
+}
+.btn {
+    background-color: #31577C;
+    border: none; 
+    color: white; 
+    padding: 12px 16px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    width:100%;
+
+}
+@media screen and (max-width : 1080px){
+    ul { /* da se drop linkovi pojavljuju u liniji*/
+        position: static;
+        display: none;
+    }
+    ul li, li a {
+        width: 100%;
+    }
+    .meni{
+        display:block;
+    }
+    .login{
+      display:none;
+    }
+    button{
+      display:block;
+    }
+}
+
+
+input[type=text] {
+  width: 100px;
+  padding: 7px 7px;
+  margin: 0;
+  box-sizing: border-box;
+}
+input[type=password] {
+  width: 100px;
+  padding: 7px 7px;
+  margin: 0;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  background-color: #97C026;
+  border: none;
+  color: white;
+  padding: 7px 20px;
+  margin: 8px 10px 8px 0px;
+  width: 100px;
+}
+.footer {
+	background:#31577C ;
+	height: 30px;
+	padding-bottom: 50px;
+}
+.footer p {
+	color: white;
+	font-size: 18px;
+	line-height: 50px;
+	margin:0;
+	text-align:center;
+}

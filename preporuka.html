@@ -1,0 +1,80 @@
+<!doctype html>
+<head>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico"> 
+<link rel="stylesheet" href="Navbar.css">
+<link rel="stylesheet" href="preporuka.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="fpreporuka.js"></script>
+<script src="kolacic.js"></script>
+<script src="kolacic_sifra.js"></script>
+<script src="dugme.js"></script>
+<script src="promena.js"></script>
+</head>
+<body onload="popuni();popuni2()">
+<title> Android blog </title>
+<div>
+   <button class="btn" id="ikonica" onclick="otvori()"><i class="fa fa-bars"></i> </button>
+<ul id="meni">
+        <li ><a href="Naslovna.html" id="li">Naslovna</a></li>
+        <li>
+            <a href="Uređaji.html" id="li1">Uređaji ￬</a>
+            <ul class="drop">
+                <li><a href="Pixel.html">Google Pixel 2</a></li>
+                <li><a href="V30.html">LG V30</a></li>
+            </ul>
+        </li>
+        <li><a href="Softver.html" id="li2">Softver</a></li>
+        <li><a href="Registracija.html" id="li3">Registracija</a></li>
+        <li><a href="preporuka.html" id="li4"> Preporuka telefona </a> </li>
+        <li>
+    </ul>
+    </div>
+	<div>
+	<form  class="login" id="polja">      
+    <input type="button" id="dugme_promena" class="promena" onclick="promena()" value="Tema" >        	
+<input type="text" placeholder="Pretraga..">					
+                        <input type="text"  name="korisničko" placeholder="Korisničko ime" id="ime">             
+                        <input type="password"  name="lozinka" placeholder="Lozinka" id="lozinka">                 
+                    <input type="submit" value="Uloguj se" >
+					</div>
+                </form>
+</div>
+<div class="bg">
+</div> 
+<center>
+<div class="reg">
+<h1> Pomoć pri odabiru mobilnog telefona </h1> <br>
+<form name="anketa" class="regi" method="post" action="preporuka.html" onsubmit="return preporuka()">
+
+<p> Koja veličina displeja Vam odgovara? </p>
+<p class="velicina"> <input type="radio" name="velicina" id="m5" > &lt; 5" <input type="radio" name="velicina" id="v5"> &gt; 5" 
+<input type="radio" name="velicina" id="m6"> &lt; 6" <input type="radio" name="velicina" id="v6"> &gt; 6"</p> <br>
+
+<p> Koliko Vam je bitan kvalitet displeja? </p>
+<p class="displej" ><input type="radio" name="displej" id="dnebitno" value="nebitno" > Nebitno <input type="radio" name="displej" id="dbitno"> Bitno
+<input type="radio" name="displej" id="dmbitno"> Mnogo bitno </p><br>
+
+<p> Koliko Vam je bitno trajanje baterija? </p>
+<p class="baterija"><input type="radio" name="baterija" id="bnebitno" > Nebitno <input type="radio" name="baterija" id="bbitno">  Bitno 
+<input type="radio" name="baterija" id="bmbitno"> Mnogo bitno </p> <br>
+
+<p> Koliko Vam je bitan kvalitet fotografija? </p>
+<p class="kamera"><input type="radio" name="kamera" id="fnebitno" > Nebitno <input type="radio" name="kamera" id="fbitno"> Bitno 
+<input type="radio" name="kamera" id="fmbitno"> Mnogo bitno </p> <br>
+
+<p> Da li Vam je bitan 3.5mm ulaz? </p>
+<p class="ulaz"><input type="radio" name="ulaz" id="une" > Ne <input type="radio" name="ulaz" id="uda"> Da </p> <br>
+
+<p> Koji operativni sistem preferirate? </p> 
+<p class="sistem"><input type="radio" name="sistem" id="android" >  Android <input type="radio" name="sistem" id="iOS"> iOS
+<input type="radio" name="sistem" id="windows"> Windows </p> <br>
+<span id="preporuka"> </span>
+<p> <input type="submit" value="Prosledite"> </p>
+<script>
+window.open("galerija.html","Galerija telefona","width=600, height=600");
+</script>
+</div>
+</body>
+</html>
